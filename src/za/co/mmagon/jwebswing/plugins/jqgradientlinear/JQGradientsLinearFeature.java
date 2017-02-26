@@ -32,94 +32,30 @@ public class JQGradientsLinearFeature extends Feature<JavaScriptPart, JQGradient
 
     private static final long serialVersionUID = 1L;
 
-    private String fromColour = "000000";
-    private String toColour = "ffffff";
-    private String direction = "horizontal";
-    private String position = "top";
-    private String length;
-    private Component componentToApply;
+    private JQGradientOptions options;
 
     public JQGradientsLinearFeature(Component componentToApply)
     {
         super("JWGradientsFeature");
-        this.componentToApply = componentToApply;
+        setComponent(componentToApply);
+        componentToApply.addFeature(this);
         getJavascriptReferences().add(new JQGradientsJavascriptReference());
-    }
-
-    public JQGradientsLinearFeature(Component componentToApply, String fromColour, String toColour, String direction)
-    {
-        this(componentToApply);
-        this.componentToApply = componentToApply;
-        this.fromColour = fromColour;
-        this.toColour = toColour;
-        this.direction = direction;
-        this.position = position;
-        this.length = length;
-    }
-
-    public String getFromColour()
-    {
-        return fromColour;
-    }
-
-    public void setFromColour(String fromColour)
-    {
-        this.fromColour = fromColour;
-    }
-
-    public String getToColour()
-    {
-        return toColour;
-    }
-
-    public void setToColour(String toColour)
-    {
-        this.toColour = toColour;
-    }
-
-    public String getGradientDirection()
-    {
-        return direction;
-    }
-
-    public void setDirection(String direction)
-    {
-        this.direction = direction;
-    }
-
-    public String getPositionString()
-    {
-        return position;
-    }
-
-    public void setPosition(String position)
-    {
-        this.position = position;
-    }
-
-    public String getLength()
-    {
-        return length;
-    }
-
-    public void setLength(String length)
-    {
-        this.length = length;
-    }
-
-    public Component getComponentToApply()
-    {
-        return componentToApply;
-    }
-
-    public void setComponentToApply(Component componentToApply)
-    {
-        this.componentToApply = componentToApply;
     }
 
     @Override
     public void assignFunctionsToComponent()
     {
-        addQuery("$('#" + componentToApply.getID() + "').gradient({from: '" + fromColour + "', to: '" + toColour + "', direction: '" + direction + "'});");
+        addQuery(getComponent().getJQueryID() + "gradient(" + getOptions() + ");" + getNewLine());
     }
+
+    @Override
+    public JQGradientOptions getOptions()
+    {
+        if (options == null)
+        {
+            options = new JQGradientOptions();
+        }
+        return options;
+    }
+
 }
