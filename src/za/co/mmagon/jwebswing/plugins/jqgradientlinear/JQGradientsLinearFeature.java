@@ -22,40 +22,39 @@ import za.co.mmagon.jwebswing.base.html.interfaces.children.ImageMapFeatures;
 import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
 
 /**
- *
- * @since Forver
  * @author mmagon
  * @version 1.0
+ * @since Forver
  */
 public class JQGradientsLinearFeature extends Feature<JavaScriptPart, JQGradientsLinearFeature> implements ImageMapFeatures
 {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    private JQGradientOptions options;
+	private JQGradientOptions options;
 
-    public JQGradientsLinearFeature(Component componentToApply)
-    {
-        super("JWGradientsFeature");
-        setComponent(componentToApply);
-        componentToApply.addFeature(this);
-        getJavascriptReferences().add(new JQGradientsJavascriptReference());
-    }
+	public JQGradientsLinearFeature(Component componentToApply)
+	{
+		super("JWGradientsFeature");
+		setComponent(componentToApply);
+		componentToApply.addFeature(this);
+		getJavascriptReferences().add(new JQGradientsJavascriptReference());
+	}
 
-    @Override
-    public void assignFunctionsToComponent()
-    {
-        addQuery(getComponent().getJQueryID() + "gradient(" + getOptions() + ");" + getNewLine());
-    }
+	@Override
+	public void assignFunctionsToComponent()
+	{
+		addQuery(getComponent().getJQueryID() + "gradient(" + getOptions() + ");" + getNewLine());
+	}
 
-    @Override
-    public JQGradientOptions getOptions()
-    {
-        if (options == null)
-        {
-            options = new JQGradientOptions();
-        }
-        return options;
-    }
+	@Override
+	public JQGradientOptions getOptions()
+	{
+		if (options == null)
+		{
+			options = new JQGradientOptions();
+		}
+		return options;
+	}
 
 }

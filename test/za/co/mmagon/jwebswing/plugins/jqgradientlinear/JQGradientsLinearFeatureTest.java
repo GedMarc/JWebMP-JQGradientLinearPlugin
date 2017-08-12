@@ -27,26 +27,25 @@ import org.junit.Test;
 import za.co.mmagon.jwebswing.base.html.Div;
 
 /**
- *
  * @author GedMarc
  */
 public class JQGradientsLinearFeatureTest
 {
 
-    public JQGradientsLinearFeatureTest()
-    {
-    }
+	public JQGradientsLinearFeatureTest()
+	{
+	}
 
-    @Test
-    public void testGetOptions()
-    {
-        Div d = new Div();
-        JQGradientsLinearFeature f = new JQGradientsLinearFeature(d);
-        d.preConfigure();
-        d.addFeature(f);
-        f.getOptions().setFromColour("asdf");
-        System.out.println(d.toString(true));
-        System.out.println(d.renderJavascript());
-    }
+	@Test
+	public void testGetOptions()
+	{
+		Div d = new Div();
+		JQGradientsLinearFeature f = new JQGradientsLinearFeature(d);
+		d.preConfigure();
+		d.addFeature(f);
+		f.getOptions().setFromColour("asdf");
+		System.out.println(d.toString(true));
+		System.out.println(d.renderJavascript());
+	}
 
 }

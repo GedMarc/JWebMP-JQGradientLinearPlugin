@@ -19,23 +19,21 @@ package za.co.mmagon.jwebswing.plugins.jqgradientlinear;
 import za.co.mmagon.jwebswing.base.references.JavascriptReference;
 
 /**
- *
  * @author GedMarc
- * @since Mar 1, 2015
  * @version 1.0
  * <p>
- *
+ * @since Mar 1, 2015
  */
 public class JQGradientsJavascriptReference extends JavascriptReference
 {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    /**
-     *
-     */
-    public JQGradientsJavascriptReference()
-    {
-        super("JWGradientsLinear", 1.0, "javascript/gradients/jquery.gradient.js", "https://raw.githubusercontent.com/brandonaaron/jquery-gradient/master/jquery.gradient.js");
-    }
+	/**
+	 *
+	 */
+	public JQGradientsJavascriptReference()
+	{
+		super("JWGradientsLinear", 1.0, "javascript/gradients/jquery.gradient.js", "https://raw.githubusercontent.com/brandonaaron/jquery-gradient/master/jquery.gradient.js");
+	}
 }
