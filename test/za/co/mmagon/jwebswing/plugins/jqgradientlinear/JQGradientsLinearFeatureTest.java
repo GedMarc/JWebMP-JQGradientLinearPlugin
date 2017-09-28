@@ -23,7 +23,7 @@
  */
 package za.co.mmagon.jwebswing.plugins.jqgradientlinear;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import za.co.mmagon.jwebswing.base.html.Div;
 
 /**
