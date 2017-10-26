@@ -18,6 +18,7 @@ package za.co.mmagon.jwebswing.plugins.jqgradientlinear;
 
 import za.co.mmagon.jwebswing.Component;
 import za.co.mmagon.jwebswing.Feature;
+import za.co.mmagon.jwebswing.base.ComponentHierarchyBase;
 import za.co.mmagon.jwebswing.base.html.interfaces.children.ImageMapFeatures;
 import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
 
@@ -57,4 +58,9 @@ public class JQGradientsLinearFeature extends Feature<JavaScriptPart, JQGradient
 		return options;
 	}
 
+	@Override
+	public JQGradientsLinearFeature setComponent(ComponentHierarchyBase component)
+	{
+		return super.setComponent(component);
+	}
 }
