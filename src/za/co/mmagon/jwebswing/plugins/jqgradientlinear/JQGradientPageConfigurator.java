@@ -16,6 +16,8 @@
  */
 package za.co.mmagon.jwebswing.plugins.jqgradientlinear;
 
+import za.co.mmagon.jwebswing.Page;
+import za.co.mmagon.jwebswing.PageConfigurator;
 import za.co.mmagon.jwebswing.plugins.PluginInformation;
 
 /**
@@ -38,11 +40,17 @@ import za.co.mmagon.jwebswing.plugins.PluginInformation;
 		pluginIconImageUrl = "gradients/logo.jpg",
 		pluginLastUpdatedDate = "2017/03/04"
 )
-public class JQGradientPageConfigurator
+public class JQGradientPageConfigurator extends PageConfigurator
 {
 
 	public JQGradientPageConfigurator()
 	{
 
+	}
+
+	@Override
+	public Page configure(Page page)
+	{
+		return page;
 	}
 }
