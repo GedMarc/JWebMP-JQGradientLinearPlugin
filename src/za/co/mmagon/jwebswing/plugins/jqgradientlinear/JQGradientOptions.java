@@ -16,6 +16,7 @@
  */
 package za.co.mmagon.jwebswing.plugins.jqgradientlinear;
 
+import za.co.mmagon.jwebswing.generics.Direction;
 import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
 import za.co.mmagon.jwebswing.plugins.ComponentInformation;
 
@@ -41,7 +42,7 @@ public class JQGradientOptions extends JavaScriptPart
 	/**
 	 * The direction in text
 	 */
-	private String direction = "horizontal";
+	private Direction direction = Direction.Horizontal;
 	/**
 	 * The direction in top
 	 */
@@ -101,7 +102,7 @@ public class JQGradientOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public String getGradientDirection()
+	public Direction getGradientDirection()
 	{
 		return direction;
 	}
@@ -111,7 +112,7 @@ public class JQGradientOptions extends JavaScriptPart
 	 *
 	 * @param direction
 	 */
-	public void setDirection(String direction)
+	public void setDirection(Direction direction)
 	{
 		this.direction = direction;
 	}
