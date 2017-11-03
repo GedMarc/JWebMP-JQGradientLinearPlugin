@@ -63,4 +63,33 @@ public class JQGradientsLinearFeature extends Feature<JavaScriptPart, JQGradient
 	{
 		return super.setComponent(component);
 	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (o == null || getClass() != o.getClass())
+		{
+			return false;
+		}
+		if (!super.equals(o))
+		{
+			return false;
+		}
+
+		JQGradientsLinearFeature that = (JQGradientsLinearFeature) o;
+
+		return getOptions().equals(that.getOptions());
+	}
+
+	@Override
+	public int hashCode()
+	{
+		int result = super.hashCode();
+		result = 31 * result + getOptions().hashCode();
+		return result;
+	}
 }

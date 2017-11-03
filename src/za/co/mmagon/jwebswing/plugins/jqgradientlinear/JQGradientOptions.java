@@ -54,7 +54,7 @@ public class JQGradientOptions extends JavaScriptPart
 
 	public JQGradientOptions()
 	{
-
+		//Nothing needed
 	}
 
 	/**

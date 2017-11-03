@@ -45,7 +45,7 @@ public class JQGradientPageConfigurator extends PageConfigurator
 
 	public JQGradientPageConfigurator()
 	{
-
+		//Nothing needed
 	}
 
 	@Override
