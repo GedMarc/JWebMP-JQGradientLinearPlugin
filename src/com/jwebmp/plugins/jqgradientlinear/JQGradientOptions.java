@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -14,19 +14,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.jqgradientlinear;
+package com.jwebmp.plugins.jqgradientlinear;
 
-import za.co.mmagon.jwebswing.generics.Direction;
-import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
-import za.co.mmagon.jwebswing.plugins.ComponentInformation;
+import com.jwebmp.generics.Direction;
+import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
+import com.jwebmp.plugins.ComponentInformation;
 
 /**
  * @author GedMarc
  * @since 27 Feb 2017
  */
-@ComponentInformation(name = "JQuery Gradient", description = "A jQuery plugin that adds a dynamically created configurable gradient to the background of an element without the use of images.",
+@ComponentInformation(name = "JQuery Gradient",
+		description = "A jQuery plugin that adds a dynamically created configurable gradient to the background of an element without the use of images.",
 		url = "https://github.com/brandonaaron/jquery-gradient")
-public class JQGradientOptions extends JavaScriptPart
+public class JQGradientOptions
+		extends JavaScriptPart
 {
 
 	private static final long serialVersionUID = 1L;

@@ -14,22 +14,24 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.jqgradientlinear;
+package com.jwebmp.plugins.jqgradientlinear;
 
-import za.co.mmagon.jwebswing.Component;
-import za.co.mmagon.jwebswing.Feature;
-import za.co.mmagon.jwebswing.base.ComponentHierarchyBase;
-import za.co.mmagon.jwebswing.base.html.interfaces.children.ImageMapFeatures;
-import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
+import com.jwebmp.Component;
+import com.jwebmp.Feature;
+import com.jwebmp.base.ComponentHierarchyBase;
+import com.jwebmp.base.html.interfaces.children.ImageMapFeatures;
+import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
 
-import static za.co.mmagon.jwebswing.utilities.StaticStrings.STRING_CLOSING_BRACKET_SEMICOLON;
+import static com.jwebmp.utilities.StaticStrings.STRING_CLOSING_BRACKET_SEMICOLON;
 
 /**
  * @author mmagon
  * @version 1.0
  * @since Forver
  */
-public class JQGradientsLinearFeature extends Feature<JavaScriptPart, JQGradientsLinearFeature> implements ImageMapFeatures
+public class JQGradientsLinearFeature
+		extends Feature<JavaScriptPart, JQGradientsLinearFeature>
+		implements ImageMapFeatures
 {
 
 	private static final long serialVersionUID = 1L;
@@ -45,25 +47,17 @@ public class JQGradientsLinearFeature extends Feature<JavaScriptPart, JQGradient
 	}
 
 	@Override
-	public void assignFunctionsToComponent()
-	{
-		addQuery(getComponent().getJQueryID() + "gradient(" + getOptions() + STRING_CLOSING_BRACKET_SEMICOLON + getNewLine());
-	}
-
-	@Override
-	public JQGradientOptions getOptions()
-	{
-		if (options == null)
-		{
-			options = new JQGradientOptions();
-		}
-		return options;
-	}
-
-	@Override
 	public JQGradientsLinearFeature setComponent(ComponentHierarchyBase component)
 	{
 		return super.setComponent(component);
+	}
+
+	@Override
+	public int hashCode()
+	{
+		int result = super.hashCode();
+		result = 31 * result + getOptions().hashCode();
+		return result;
 	}
 
 	@Override
@@ -88,10 +82,18 @@ public class JQGradientsLinearFeature extends Feature<JavaScriptPart, JQGradient
 	}
 
 	@Override
-	public int hashCode()
+	public JQGradientOptions getOptions()
 	{
-		int result = super.hashCode();
-		result = 31 * result + getOptions().hashCode();
-		return result;
+		if (options == null)
+		{
+			options = new JQGradientOptions();
+		}
+		return options;
+	}
+
+	@Override
+	public void assignFunctionsToComponent()
+	{
+		addQuery(getComponent().getJQueryID() + "gradient(" + getOptions() + STRING_CLOSING_BRACKET_SEMICOLON + getNewLine());
 	}
 }

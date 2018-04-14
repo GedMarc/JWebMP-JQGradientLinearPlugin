@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -14,26 +14,32 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.jqgradientlinear;
+package com.jwebmp.plugins.jqgradientlinear;
 
-import za.co.mmagon.jwebswing.base.references.JavascriptReference;
+import com.jwebmp.base.html.Div;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author GedMarc
- * @version 1.0
- * <p>
- * @since Mar 1, 2015
  */
-public class JQGradientsJavascriptReference extends JavascriptReference
+public class JQGradientsLinearFeatureTest
 {
 
-	private static final long serialVersionUID = 1L;
-
-	/**
-	 *
-	 */
-	public JQGradientsJavascriptReference()
+	public JQGradientsLinearFeatureTest()
 	{
-		super("JWGradientsLinear", 1.0, "javascript/gradients/jquery.gradient.js", "https://raw.githubusercontent.com/brandonaaron/jquery-gradient/master/jquery.gradient.js");
 	}
+
+	@Test
+	public void testGetOptions()
+	{
+		Div d = new Div();
+		JQGradientsLinearFeature f = new JQGradientsLinearFeature(d);
+		d.preConfigure();
+		d.addFeature(f);
+		f.getOptions()
+		 .setFromColour("asdf");
+		System.out.println(d.toString(true));
+		System.out.println(d.renderJavascript());
+	}
+
 }

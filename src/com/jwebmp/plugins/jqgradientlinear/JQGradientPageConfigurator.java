@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.jqgradientlinear;
+package com.jwebmp.plugins.jqgradientlinear;
 
-import za.co.mmagon.jwebswing.Page;
-import za.co.mmagon.jwebswing.PageConfigurator;
-import za.co.mmagon.jwebswing.plugins.PluginInformation;
+import com.jwebmp.Page;
+import com.jwebmp.PageConfigurator;
+import com.jwebmp.plugins.PluginInformation;
 
 /**
  * @author GedMarc
@@ -38,9 +38,9 @@ import za.co.mmagon.jwebswing.plugins.PluginInformation;
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/JQGradientLinearPlugin.jar/download",
 		pluginIconUrl = "gradients/logo.jpg",
 		pluginIconImageUrl = "gradients/logo.jpg",
-		pluginLastUpdatedDate = "2017/03/04"
-)
-public class JQGradientPageConfigurator extends PageConfigurator
+		pluginLastUpdatedDate = "2017/03/04")
+public class JQGradientPageConfigurator
+		extends PageConfigurator
 {
 
 	public JQGradientPageConfigurator()
