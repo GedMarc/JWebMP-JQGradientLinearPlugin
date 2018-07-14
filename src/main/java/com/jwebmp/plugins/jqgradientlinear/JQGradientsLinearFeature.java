@@ -22,7 +22,7 @@ import com.jwebmp.base.ComponentHierarchyBase;
 import com.jwebmp.base.html.interfaces.children.ImageMapFeatures;
 import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
 
-import static com.jwebmp.utilities.StaticStrings.STRING_CLOSING_BRACKET_SEMICOLON;
+import static com.jwebmp.utilities.StaticStrings.*;
 
 /**
  * @author mmagon
@@ -44,12 +44,6 @@ public class JQGradientsLinearFeature
 		setComponent(componentToApply);
 		componentToApply.addFeature(this);
 		getJavascriptReferences().add(new JQGradientsJavascriptReference());
-	}
-
-	@Override
-	public JQGradientsLinearFeature setComponent(ComponentHierarchyBase component)
-	{
-		return super.setComponent(component);
 	}
 
 	@Override
@@ -95,5 +89,11 @@ public class JQGradientsLinearFeature
 	public void assignFunctionsToComponent()
 	{
 		addQuery(getComponent().getJQueryID() + "gradient(" + getOptions() + STRING_CLOSING_BRACKET_SEMICOLON + getNewLine());
+	}
+
+	@Override
+	public JQGradientsLinearFeature setComponent(ComponentHierarchyBase component)
+	{
+		return super.setComponent(component);
 	}
 }

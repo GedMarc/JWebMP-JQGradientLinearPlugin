@@ -21,10 +21,11 @@ import com.jwebmp.base.references.JavascriptReference;
 /**
  * @author GedMarc
  * @version 1.0
- * <p>
+ * 		<p>
  * @since Mar 1, 2015
  */
-public class JQGradientsJavascriptReference extends JavascriptReference
+public class JQGradientsJavascriptReference
+		extends JavascriptReference
 {
 
 	private static final long serialVersionUID = 1L;
