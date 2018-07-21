@@ -16,9 +16,9 @@
  */
 package com.jwebmp.plugins.jqgradientlinear;
 
-import com.jwebmp.generics.Direction;
-import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
-import com.jwebmp.plugins.ComponentInformation;
+import com.jwebmp.core.generics.Direction;
+import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
+import com.jwebmp.core.plugins.ComponentInformation;
 
 /**
  * @author GedMarc

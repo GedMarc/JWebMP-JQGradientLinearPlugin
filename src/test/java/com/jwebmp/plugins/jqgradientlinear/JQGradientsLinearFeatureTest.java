@@ -16,7 +16,7 @@
  */
 package com.jwebmp.plugins.jqgradientlinear;
 
-import com.jwebmp.base.html.Div;
+import com.jwebmp.core.base.html.Div;
 import org.junit.jupiter.api.Test;
 
 /**
