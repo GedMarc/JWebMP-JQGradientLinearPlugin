@@ -1,3 +1,6 @@
+import com.jwebmp.core.services.IPageConfigurator;
+import com.jwebmp.plugins.jqgradientlinear.JQGradientPageConfigurator;
+
 module com.jwebmp.plugins.jqgradientlinear {
 	exports com.jwebmp.plugins.jqgradientlinear;
 
@@ -7,4 +10,7 @@ module com.jwebmp.plugins.jqgradientlinear {
 
 	requires java.validation;
 	requires java.logging;
+
+	provides IPageConfigurator with JQGradientPageConfigurator;
+
 }

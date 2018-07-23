@@ -17,8 +17,8 @@
 package com.jwebmp.plugins.jqgradientlinear;
 
 import com.jwebmp.core.Page;
-import com.jwebmp.core.PageConfigurator;
 import com.jwebmp.core.plugins.PluginInformation;
+import com.jwebmp.core.services.IPageConfigurator;
 
 /**
  * @author GedMarc
@@ -40,7 +40,7 @@ import com.jwebmp.core.plugins.PluginInformation;
 		pluginIconImageUrl = "gradients/logo.jpg",
 		pluginLastUpdatedDate = "2017/03/04")
 public class JQGradientPageConfigurator
-		extends PageConfigurator
+		implements IPageConfigurator
 {
 
 	public JQGradientPageConfigurator()
