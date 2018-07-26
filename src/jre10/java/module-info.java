@@ -12,5 +12,5 @@ module com.jwebmp.plugins.jqgradientlinear {
 	requires java.logging;
 
 	provides IPageConfigurator with JQGradientPageConfigurator;
-
+	opens com.jwebmp.plugins.jqgradientlinear to com.fasterxml.jackson.databind,com.jwebmp.core;
 }
