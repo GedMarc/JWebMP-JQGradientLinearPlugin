@@ -19,8 +19,9 @@ package com.jwebmp.plugins.jqgradientlinear;
 import com.jwebmp.core.Component;
 import com.jwebmp.core.Feature;
 import com.jwebmp.core.base.ComponentHierarchyBase;
-import com.jwebmp.core.base.html.interfaces.children.ImageMapFeatures;
 import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
+
+import javax.validation.constraints.NotNull;
 
 import static com.jwebmp.core.utilities.StaticStrings.*;
 
@@ -30,8 +31,7 @@ import static com.jwebmp.core.utilities.StaticStrings.*;
  * @since Forver
  */
 public class JQGradientsLinearFeature
-		extends Feature<JavaScriptPart, JQGradientsLinearFeature>
-		implements ImageMapFeatures
+		extends Feature<JQGradientsLinearFeature, JavaScriptPart, JQGradientsLinearFeature>
 {
 
 	private static final long serialVersionUID = 1L;
@@ -49,30 +49,13 @@ public class JQGradientsLinearFeature
 	@Override
 	public int hashCode()
 	{
-		int result = super.hashCode();
-		result = 31 * result + getOptions().hashCode();
-		return result;
+		return super.hashCode();
 	}
 
 	@Override
-	public boolean equals(Object o)
+	public boolean equals(Object obj)
 	{
-		if (this == o)
-		{
-			return true;
-		}
-		if (o == null || getClass() != o.getClass())
-		{
-			return false;
-		}
-		if (!super.equals(o))
-		{
-			return false;
-		}
-
-		JQGradientsLinearFeature that = (JQGradientsLinearFeature) o;
-
-		return getOptions().equals(that.getOptions());
+		return super.equals(obj);
 	}
 
 	@Override
@@ -91,6 +74,7 @@ public class JQGradientsLinearFeature
 		addQuery(getComponent().getJQueryID() + "gradient(" + getOptions() + STRING_CLOSING_BRACKET_SEMICOLON + getNewLine());
 	}
 
+	@NotNull
 	@Override
 	public JQGradientsLinearFeature setComponent(ComponentHierarchyBase component)
 	{
