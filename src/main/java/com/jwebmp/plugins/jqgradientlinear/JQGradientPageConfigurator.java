@@ -33,16 +33,16 @@ import javax.validation.constraints.NotNull;
 		pluginDependancyUniqueIDs = "jquery",
 		pluginCategories = "jquery, gradients",
 		pluginSubtitle = "Adds a dynamically created configurable gradient to the background of an element without the use of images.",
-		pluginGitUrl = "https://github.com/GedMarc/JWebSwing-JQGradientLinearPlugin",
+		pluginGitUrl = "https://github.com/GedMarc/JWebMP-JQGradientLinearPlugin",
 		pluginSourceUrl = "https://github.com/brandonaaron/jquery-gradient",
-		pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-JQGradientLinearPlugin/wiki",
+		pluginWikiUrl = "https://github.com/GedMarc/JWebMP-JQGradientLinearPlugin/wiki",
 		pluginOriginalHomepage = "https://github.com/brandonaaron/jquery-gradient",
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/JQGradientLinearPlugin.jar/download",
 		pluginIconUrl = "gradients/logo.jpg",
 		pluginIconImageUrl = "gradients/logo.jpg",
 		pluginLastUpdatedDate = "2017/03/04")
 public class JQGradientPageConfigurator
-		implements IPageConfigurator
+		implements IPageConfigurator<JQGradientPageConfigurator>
 {
 	/**
 	 * If this configurator is enabled
