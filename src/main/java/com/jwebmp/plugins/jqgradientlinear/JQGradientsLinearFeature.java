@@ -34,7 +34,6 @@ public class JQGradientsLinearFeature
 		extends Feature<JQGradientsLinearFeature, JavaScriptPart, JQGradientsLinearFeature>
 {
 
-	private static final long serialVersionUID = 1L;
 
 	private JQGradientOptions options;
 
