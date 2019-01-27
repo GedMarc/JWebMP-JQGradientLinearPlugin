@@ -1,9 +1,3 @@
-import com.jwebmp.core.services.IPageConfigurator;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions;
-import com.jwebmp.plugins.jqgradientlinear.JQGradientPageConfigurator;
-import com.jwebmp.plugins.jqgradientlinear.implementations.JQGradientsExclusionsModule;
-
 module com.jwebmp.plugins.jqgradientlinear {
 	exports com.jwebmp.plugins.jqgradientlinear;
 
@@ -15,10 +9,10 @@ module com.jwebmp.plugins.jqgradientlinear {
 	requires java.logging;
 	requires com.jwebmp.guicedinjection;
 
-	provides IPageConfigurator with JQGradientPageConfigurator;
+	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.jqgradientlinear.JQGradientPageConfigurator;
 
-	provides IGuiceScanModuleExclusions with JQGradientsExclusionsModule;
-	provides IGuiceScanJarExclusions with JQGradientsExclusionsModule;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions with com.jwebmp.plugins.jqgradientlinear.implementations.JQGradientsExclusionsModule;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions with com.jwebmp.plugins.jqgradientlinear.implementations.JQGradientsExclusionsModule;
 
 	opens com.jwebmp.plugins.jqgradientlinear to com.fasterxml.jackson.databind, com.jwebmp.core;
 }
