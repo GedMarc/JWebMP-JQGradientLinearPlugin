@@ -23,6 +23,7 @@ import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
 
 import javax.validation.constraints.NotNull;
 
+import static com.guicedee.guicedinjection.json.StaticStrings.STRING_CLOSING_BRACKET_SEMICOLON;
 import static com.jwebmp.core.utilities.StaticStrings.*;
 
 /**
