@@ -21,7 +21,7 @@ import com.jwebmp.core.Feature;
 import com.jwebmp.core.base.ComponentHierarchyBase;
 import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 import static com.guicedee.guicedinjection.json.StaticStrings.STRING_CLOSING_BRACKET_SEMICOLON;
 import static com.jwebmp.core.utilities.StaticStrings.*;
