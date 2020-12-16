@@ -18,6 +18,7 @@ package com.jwebmp.plugins.jqgradientlinear;
 
 import com.jwebmp.core.Page;
 import com.jwebmp.core.plugins.PluginInformation;
+import com.jwebmp.core.plugins.PluginStatus;
 import com.jwebmp.core.services.IPageConfigurator;
 
 import jakarta.validation.constraints.NotNull;
@@ -37,10 +38,15 @@ import jakarta.validation.constraints.NotNull;
 		pluginSourceUrl = "https://github.com/brandonaaron/jquery-gradient",
 		pluginWikiUrl = "https://github.com/GedMarc/JWebMP-JQGradientLinearPlugin/wiki",
 		pluginOriginalHomepage = "https://github.com/brandonaaron/jquery-gradient",
-		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/JQGradientLinearPlugin.jar/download",
+		pluginDownloadUrl = "https://mvnrepository.com/artifact/com.jwebmp.plugins.jquery/jwebmp-linear-gradients",
 		pluginIconUrl = "gradients/logo.jpg",
 		pluginIconImageUrl = "gradients/logo.jpg",
-		pluginLastUpdatedDate = "2017/03/04")
+		pluginLastUpdatedDate = "2017/03/04",
+		pluginGroupId = " com.jwebmp.plugins.jquery",
+		pluginArtifactId = "jwebmp-linear-gradients",
+		pluginModuleName = "com.jwebmp.plugins.jqgradientlinear",
+		pluginStatus = PluginStatus.Deprecated
+)
 public class JQGradientPageConfigurator
 		implements IPageConfigurator<JQGradientPageConfigurator>
 {

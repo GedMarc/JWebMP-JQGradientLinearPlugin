@@ -19,6 +19,7 @@ package com.jwebmp.plugins.jqgradientlinear;
 import com.jwebmp.core.Component;
 import com.jwebmp.core.Feature;
 import com.jwebmp.core.base.ComponentHierarchyBase;
+import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
 import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
 
 import jakarta.validation.constraints.NotNull;
@@ -32,17 +33,17 @@ import static com.jwebmp.core.utilities.StaticStrings.*;
  * @since Forver
  */
 public class JQGradientsLinearFeature
-		extends Feature<JQGradientsLinearFeature, JavaScriptPart, JQGradientsLinearFeature>
+		extends Feature<JQGradientsLinearFeature, JavaScriptPart<?>, JQGradientsLinearFeature>
 {
 
 
 	private JQGradientOptions options;
 
-	public JQGradientsLinearFeature(Component componentToApply)
+	public JQGradientsLinearFeature(IComponentHierarchyBase<?,?> componentToApply)
 	{
 		super("JWGradientsFeature");
 		setComponent(componentToApply);
-		componentToApply.addFeature(this);
+		componentToApply.asFeatureBase().addFeature(this);
 		getJavascriptReferences().add(new JQGradientsJavascriptReference());
 	}
 
@@ -71,12 +72,12 @@ public class JQGradientsLinearFeature
 	@Override
 	public void assignFunctionsToComponent()
 	{
-		addQuery(getComponent().getJQueryID() + "gradient(" + getOptions() + STRING_CLOSING_BRACKET_SEMICOLON + getNewLine());
+		addQuery(getComponent().asBase().getJQueryID() + "gradient(" + getOptions() + STRING_CLOSING_BRACKET_SEMICOLON + getNewLine());
 	}
 
 	@NotNull
 	@Override
-	public JQGradientsLinearFeature setComponent(ComponentHierarchyBase component)
+	public JQGradientsLinearFeature setComponent(IComponentHierarchyBase<?,?> component)
 	{
 		return super.setComponent(component);
 	}

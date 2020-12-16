@@ -28,7 +28,7 @@ import com.jwebmp.core.plugins.ComponentInformation;
 		description = "A jQuery plugin that adds a dynamically created configurable gradient to the background of an element without the use of images.",
 		url = "https://github.com/brandonaaron/jquery-gradient")
 public class JQGradientOptions
-		extends JavaScriptPart
+		extends JavaScriptPart<JQGradientOptions>
 {
 
 
