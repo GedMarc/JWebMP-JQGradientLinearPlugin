@@ -10,7 +10,7 @@
     <groupId>com.jwebmp.plugins.jquery</groupId>
     <artifactId>jwebmp-linear-gradients</artifactId>
     <packaging>jar</packaging>
-
+    <version>0.0.0_0-SNAPSHOT</version>
     <name>Linear Gradients</name>
     <description>The JWebSwing implementation for Linear Gradents IE10 and Less</description>
     <url>https://github.com/GedMarc/JWebSwing-JQGradientLinearPlugin</url>
