@@ -4,7 +4,7 @@ module com.jwebmp.plugins.jqgradientlinear {
 	exports com.jwebmp.plugins.jqgradientlinear;
 
 	requires com.jwebmp.core;
-	requires com.guicedee.logmaster;
+	
 
 	requires jakarta.validation;
 	requires java.logging;
